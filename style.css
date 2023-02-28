@@ -1,4 +1,54 @@
 *{
   margin: 0;
   padding: 0;
+  place-items: center;
+}
+
+body{
+  background: #000;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  width: 100vw;
+}
+.card{
+  aspect-ratio: 1/1.6;
+  border: 0.5vmin solid white;
+  cursor: pointer;
+  position: relative;
+  width: 56vmin;
+}
+
+.card::before{
+  background: linear-gradient(130deg, 
+  transparent  33%,
+  #5218be 66%,
+  #ab23ab 83.5%,
+  #ab2e59 100%
+  );
+  background-size: 300% 300%;
+  background-position: 0% 0%;
+  transition: background-position 0.5s ease;
+content: "";
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;
+}
+.card:hover::before{
+  background-position: 100% 100%;
+  transform: scale(1.02,1.01);
+}
+.cardcontent{
+  position: relative;
+  background: radial-gradient(
+    rgba(255,255,255,0.2) 8%,
+    transparent 8%
+  );
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  height: 100%;
+  z-index: 100;
+  width: 100%;
 }
