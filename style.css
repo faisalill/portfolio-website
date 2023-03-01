@@ -6,6 +6,20 @@
   font-family: "BlenderProBook";
   src: url("./fonts/BlenderPro-Book.ttf");
 }
+:root {
+  --text-left: #ff399e;
+  --text-fly: #ff399e;
+  --line1: #34beff;
+  --line2: #fff;
+  --shadow-text: 0px 0px 10px #ff399e;
+  --shadow-lines: 0px 0px 0px;
+  --zi-girl-main: 4;
+  --zi-girl-side: 3;
+  --zi-canvas: 3;
+  --zi-bg-stuff: 2;
+  --zi-bg-sil: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +44,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background: #0a5dff;
-  overflow: hidden;
   border: 20px solid #0a5dff;
 }
 
@@ -51,13 +64,12 @@ image {
   width: 100%;
   position: relative;
   z-index: 2;
-  overflow: hidden;
 }
 
 .text-left {
   position: fixed;
   left: 45px;
-  bottom: 1200px;
+  bottom: 1600px;
   transform: translate(-50%, -50%) rotate(-90deg);
   font-family: "BlenderProBook";
   font-size: 30px;
@@ -67,7 +79,7 @@ image {
   text-shadow: #ff399e 0px 0px 10px;
   text-transform: uppercase;
   white-space: nowrap;
-  animation: text-left-anim 9s linear infinite;
+  animation: text-left-anim 30s linear infinite;
 }
 
 @keyframes text-left-anim {
@@ -76,5 +88,79 @@ image {
   }
   to {
     bottom: -800px;
+  }
+}
+.line-left-1 {
+  position: absolute;
+  left: 80px;
+  bottom: -47%;
+  width: 20px;
+  height: 50%;
+  background-color: #00fed2;
+  transform: skew(45deg, 0) rotateZ(45deg);
+  animation: line-left-anim 5s linear infinite;
+}
+
+.line-left-2 {
+  position: absolute;
+  left: 80px;
+  bottom: -47%;
+  width: 20px;
+  height: 50%;
+  background-color: #00fed2;
+  transform: skew(45deg, 0) rotateZ(45deg);
+  animation: line-left-anim 5s linear infinite;
+  animation-delay: 2.5s;
+}
+
+.small-line-1 {
+  position: absolute;
+  left: 80px;
+  bottom: 0%;
+  width: 20px;
+  height: 2%;
+  background-color: #00fed2;
+  transform: skew(45deg, 0) rotateZ(45deg);
+  animation: left-line-blink 4s linear infinite;
+}
+
+.small-line-2 {
+  position: absolute;
+  left: 80px;
+  bottom: 3%;
+  width: 20px;
+  height: 2%;
+  background-color: #00fed2;
+  transform: skew(45deg, 0) rotateZ(45deg);
+  animation: left-line-blink 4s linear infinite;
+  animation-delay: 200ms;
+}
+
+.small-line-3 {
+  position: absolute;
+  left: 80px;
+  bottom: 6%;
+  width: 20px;
+  height: 2%;
+  background-color: #00fed2;
+  transform: skew(45deg, 0) rotateZ(45deg);
+  animation: left-line-blink 4s linear infinite;
+  animation-delay: 400ms;
+}
+
+@keyframes line-left-anim {
+  0% {
+    bottom: -47%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+@keyframes left-line-blink {
+  0% {
+    bottom: -47%;
+  }
+  100% {
+    bottom: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
