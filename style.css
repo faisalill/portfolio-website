@@ -163,4 +163,37 @@ image {
   100% {
     bottom: 100%;
   }
+}
+.hello-text-container {
+  position: absolute;
+  left: 160px;
+  bottom: -387%;
+  animation: hello-text-anim 60s linear infinite;
+}
+
+.hello-text {
+  font-family: "BlenderProBold";
+  font-size: 160px;
+  line-height: 130px;
+  text-transform: uppercase;
+}
+
+.hello-text:nth-child(odd) {
+  color: transparent;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #ff399e;
+}
+
+.hello-text:nth-child(even) {
+  text-shadow: #ff399e 0px 0px 10px;
+  color: #ff399e;
+}
+
+@keyframes hello-text-anim {
+  0% {
+    bottom: -387%;
+  }
+  100% {
+    bottom: 0%;
+  }
 }/*# sourceMappingURL=style.css.map */
