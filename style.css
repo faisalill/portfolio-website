@@ -10,8 +10,9 @@ body{
   height: 100vh;
   place-items: center;
   width: 100vw;
+  color: white;
 }
-.card{
+.twitch-card{
   aspect-ratio: 1/1.6;
   border: 0.5vmin solid white;
   cursor: pointer;
@@ -19,7 +20,7 @@ body{
   width: 56vmin;
 }
 
-.card::before{
+.twitch-card::before{
   background: linear-gradient(130deg, 
   transparent  33%,
   #5218be 66%,
@@ -36,11 +37,11 @@ position: absolute;
 top: 0;
 width: 100%;
 }
-.card:hover::before{
+.twitch-card:hover::before{
   background-position: 100% 100%;
   transform: scale(1.02,1.01);
 }
-.cardcontent{
+.twitch-card-content{
   position: relative;
   background: radial-gradient(
     rgba(255,255,255,0.2) 8%,
@@ -48,6 +49,23 @@ width: 100%;
   );
   background-position: 0% 0%;
   background-size: 5vmin 5vmin;
+  height: 100%;
+  z-index: 100;
+  width: 100%;
+  transition: background-position 0.5s ease;
+}
+.twitch-card-content:hover{
+  background-position: -10% 0%;
+}
+
+.bg-dotted-grid{
+  position: relative;
+  background: radial-gradient(
+    rgba(255,255,255,0.2) 8%,
+    transparent 8%
+  );
+  background-position: 0% 0%;
+  background-size: 9px 9px;
   height: 100%;
   z-index: 100;
   width: 100%;
