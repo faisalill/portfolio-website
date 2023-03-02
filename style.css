@@ -55,10 +55,6 @@ body {
   z-index: 1;
 }
 
-image {
-  height: 600px;
-}
-
 .page-1 {
   height: 100%;
   width: 100%;
@@ -187,6 +183,8 @@ image {
 .hello-text:nth-child(even) {
   text-shadow: #ff399e 0px 0px 10px;
   color: #ff399e;
+  position: relative;
+  z-index: 5;
 }
 
 @keyframes hello-text-anim {
@@ -196,4 +194,38 @@ image {
   100% {
     bottom: 0%;
   }
+}
+img {
+  height: 425px;
+  width: auto;
+}
+
+.fbn-main {
+  z-index: var(--zi-girl-main);
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.fbn-left {
+  z-index: var(--zi-girl-side);
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: auto;
+}
+
+.fbn-right {
+  z-index: var(--zi-girl-side);
+  position: absolute;
+  bottom: -1px;
+  left: 75%;
+  transform: translate(-50%, 0%);
+}
+
+.fbn-side {
+  filter: saturate(2);
+  opacity: 0.3;
 }/*# sourceMappingURL=style.css.map */
