@@ -1,6 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-
-
 const tl = gsap.timeline({
     scrollTrigger:{
         trigger: ".square-trigger-2",
@@ -61,8 +59,8 @@ tl.to(".container-2", {
 })
 tl.to(".container-2", {
     position: "fixed",
-    top: "50%",
-    left: "50%",
+    top: "0%",
+    left: "0%",
     transform: "translate(-50%, -50%)",
     overflowY: "scroll",
     duration: 1,
