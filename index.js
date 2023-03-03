@@ -5,7 +5,7 @@ const tl = gsap.timeline({
         start: "top",
         end: "bottom",
         scrub: 0.2,
-        markers: true,
+        // markers: true,
     }
 })
 
