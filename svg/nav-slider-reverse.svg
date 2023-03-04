@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="1000" viewBox="0 0 1000 1000" xml:space="preserve">
+<desc>Created with Fabric.js 3.5.0</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
+<g transform="matrix(-1.914 0 0 -1.914 507.7008 500.6377)" id="928706">
+<g style="" vector-effect="non-scaling-stroke">
+		<g transform="matrix(1 0 0 1 -10 0)" clip-path="url(#CLIPPATH_3)">
+<clipPath id="CLIPPATH_3">
+	<rect transform="matrix(1 0 0 1 10 0)" id="clip0_181_364" x="-241.5" y="-20" rx="0" ry="0" width="483" height="40"/>
+</clipPath>
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-231.5, -20)" d="M 0 0 H 463 V 40 H 0 V 0 Z" stroke-linecap="round"/>
+</g>
+		<g transform="matrix(1 0 0 1 3.9819 -21.4871)" clip-path="url(#CLIPPATH_4)">
+<linearGradient id="SVGID_2" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1 0 0)" x1="508" y1="-1.48176" x2="-17.0371" y2="-1.48176">
+<stop offset="0%" style="stop-color:rgb(0,255,210);stop-opacity: 1"/>
+<stop offset="34%" style="stop-color:rgb(252,234,6);stop-opacity: 1"/>
+<stop offset="71%" style="stop-color:rgb(229,0,125);stop-opacity: 1"/>
+</linearGradient>
+<clipPath id="CLIPPATH_4">
+	<rect transform="matrix(1 0 0 1 -3.9819 21.4871)" id="clip0_181_364" x="-241.5" y="-20" rx="0" ry="0" width="483" height="40"/>
+</clipPath>
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: url(#SVGID_2); fill-rule: nonzero; opacity: 1;" transform=" translate(-245.4819, 1.4871)" d="M 455.026 59.5867 L 438.174 51.6802 L 491.148 -62.5609 L 508.001 -54.6544 L 455.026 59.5867 Z M 479.781 -54.3855 L 463.923 -61.8295 L 411.409 51.4112 L 427.267 58.8552 L 479.77 -54.3855 H 479.781 Z M 451.551 -54.1166 L 436.677 -61.098 L 384.622 51.1423 L 399.496 58.1237 L 451.551 -54.1166 V -54.1166 Z M 423.321 -53.8476 L 409.441 -60.3665 L 357.846 50.8841 L 371.726 57.403 L 423.321 -53.8476 Z M 395.091 -53.5787 L 382.195 -59.635 L 331.06 50.6152 L 343.956 56.6715 L 395.091 -53.5787 V -53.5787 Z M 366.861 -53.3098 L 354.959 -58.8927 L 304.294 50.3678 L 316.196 55.9508 L 366.861 -53.3098 Z M 338.63 -53.0409 L 327.723 -58.1613 L 277.519 50.0989 L 288.426 55.2193 L 338.63 -53.0516 V -53.0409 Z M 310.4 -52.7719 L 300.477 -57.4298 L 250.732 49.8299 L 260.655 54.4878 L 310.4 -52.7934 V -52.7719 Z M 282.17 -52.503 L 273.241 -56.6983 L 223.956 49.5718 L 232.885 53.7671 L 282.17 -52.5245 V -52.503 Z M 253.94 -52.2341 L 245.995 -55.956 L 197.17 49.3136 L 205.115 53.0356 L 253.94 -52.2556 V -52.2341 Z M 225.71 -51.9651 L 218.759 -55.2246 L 170.405 49.0554 L 177.355 52.3148 L 225.71 -51.9974 V -51.9651 Z M 197.48 -51.6962 L 191.524 -54.4931 L 143.629 48.7865 L 149.585 51.5833 L 197.48 -51.7285 V -51.6962 Z M 169.25 -51.4273 L 164.277 -53.7616 L 116.842 48.5176 L 121.814 50.8519 L 169.25 -51.4595 V -51.4273 Z M 141.02 -51.1583 L 137.042 -53.0301 L 90.0663 48.2594 L 94.0442 50.1311 L 141.02 -51.1906 V -51.1583 Z M 112.789 -50.8894 L 109.806 -52.2878 L 63.3011 48.0012 L 66.2845 49.3996 L 112.8 -50.9324 L 112.789 -50.8894 Z M 84.5593 -50.6205 L 82.5596 -51.5564 L 36.5146 47.7323 L 38.5142 48.6682 L 84.57 -50.6635 L 84.5593 -50.6205 Z M 56.0939 -49.846 L 56.3291 -50.3516 L 55.324 -50.8249 L 9.97399 46.9685 L 9.73873 47.4741 L 10.7439 47.9474 L 56.1046 -49.889 L 56.0939 -49.846 Z M 28.099 -50.0826 L 28.0776 -50.1041 L -17.0371 47.1944 L -17.0157 47.2159 L 28.099 -50.1257 V -50.0826 Z" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</svg>
