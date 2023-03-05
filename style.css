@@ -307,6 +307,26 @@ img {
   transform: translate(-52%, -50%);
 }
 
+.about h1 {
+  font-size: 40px;
+  font-family: "BlenderProBold";
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.about p {
+  font-size: 30px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.body {
+  padding: 20px;
+  background-color: #fff901;
+  color: #000;
+  font-family: "BlenderProBook";
+}
+
 body::-webkit-scrollbar {
   width: 0;
 }/*# sourceMappingURL=style.css.map */

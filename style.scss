@@ -475,6 +475,84 @@ color: white;
 .nav-buttons a:hover::before{
   transform: translate(-52%, -50%);
 }
+.about{
+ 
+}
+.about h1{
+  font-size: 40px;
+  font-family: "BlenderProBold";
+  text-transform: uppercase;
+  padding: 10px;
+}
+.about p{
+  font-size: 30px;
+  padding: 10px;
+  font-weight: 500;
+}
+.body{
+  padding: 20px;
+  background-color: $cyber-yellow;
+  color: $cyber-black;
+  font-family: "BlenderProBook";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body::-webkit-scrollbar{
   width: 0;
