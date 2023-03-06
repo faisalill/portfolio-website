@@ -249,6 +249,7 @@ img {
   height: 100vh;
   background-color: #000;
   color: white;
+  cursor: none;
 }
 
 .navbar {
@@ -340,6 +341,16 @@ img {
   color: #000;
 }
 
+.projects h1 {
+  font-size: 40px;
+  font-family: "BlenderProBold";
+  text-transform: uppercase;
+  padding: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ff399e;
+  color: #000;
+}
+
 .fa-brands {
   color: #00fed2;
   font-size: 50px;
@@ -391,6 +402,30 @@ i::after {
 
 i:hover::after {
   display: block;
+}
+
+.cursor {
+  display: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  background-color: #00fed2;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  z-index: 101;
+  background-color: #fd1630;
+}
+
+html {
+  cursor: none;
 }
 
 body::-webkit-scrollbar {

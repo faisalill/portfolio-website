@@ -66,3 +66,20 @@ tl.to(".container-2", {
     duration: 1,
 })
 
+const cursor = document.querySelector(".cursor");
+const dot = document.querySelector(".dot");
+
+window.addEventListener("mousemove", (e) => {
+    cursor.style.display = "block";
+    dot.style.display = "block";
+   gsap.to(cursor, {
+       x: e.clientX -15,
+       y: e.clientY -15,
+       duration: 1,
+       })
+    gsap.to(dot, {
+        x: e.clientX -5,
+        y: e.clientY -5,
+        duration: 0.5,
+    })
+})

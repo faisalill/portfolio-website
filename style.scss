@@ -417,7 +417,9 @@ height: 100vh;
 // overflow: scroll;
 background-color: $cyber-black;
 color: white;
+cursor: none;
 }
+
 
 
 .navbar{
@@ -511,6 +513,10 @@ color: white;
   @include infoh1;
 }
 
+.projects h1{
+  @include infoh1;
+}
+
 @mixin skillsColor{
   color: $cyber-blue;
   // background-color: $cyber-purple;
@@ -579,14 +585,28 @@ i::after{
 i:hover::after{
   display: block;
 }
+.cursor{
+  display: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  background-color: $cyber-blue;
+}
+.dot{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  z-index: 101;
+  background-color: $cyber-red;
+}
 
-
-
-
-
-
-
-
+html{
+  cursor: none;
+}
 
 
 
