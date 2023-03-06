@@ -335,7 +335,6 @@ body{
   color: transparent;
   -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: $cyber-purple;
-  text-shadow: $cyber-purple 0px 0px 10px;
   // text-shadow: $cyber-purple 0px 0px 10px;
 }
 
@@ -420,6 +419,7 @@ background-color: $cyber-black;
 color: white;
 }
 
+
 .navbar{
   display: flex;
   // justify-content: ;
@@ -463,7 +463,7 @@ color: white;
 }
 
 .nav-buttons a::before{
-  color: $cyber-purple;
+  color: $cyber-red;
 }
  .nav-buttons a::after{
   color: $cyber-black;
@@ -478,36 +478,107 @@ color: white;
 .about{
  
 }
-.about h1{
+@mixin infoh1{
   font-size: 40px;
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $cyber-purple;
+  color: $cyber-black;
 }
-.about p{
+@mixin infop{
   font-size: 30px;
   padding: 10px;
   font-weight: 500;
+  margin-left: 10px;
+  color: $cyber-blue;
+}
+.about h1{
+  @include infoh1;
+}
+.about p{
+  @include infop;
 }
 .body{
   padding: 20px;
-  background-color: $cyber-yellow;
-  color: $cyber-black;
+  background-color: $cyber-black;
   font-family: "BlenderProBook";
+  
+}
+
+.skills h1{
+  @include infoh1;
+}
+
+@mixin skillsColor{
+  color: $cyber-blue;
+  // background-color: $cyber-purple;
+  font-size: 50px;
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: $cyber-blue;
 }
 
 
+.fa-brands{
+ @include skillsColor;
+}
 
+.fa-solid{
+@include skillsColor;
+}
 
+.next{
+  background-color: $cyber-blue;
+  border-radius: 50% 50% 50% 50%;
+  height: 55px;
+  position: relative;
+  top: 5px;
+  width: 55px;
+}
 
+.skills-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
 
+// .skill-1{
+//   display: flex;
+//   gap: 20px;
+//  }
+//  .skill-2{
+//    display: flex;
+//    gap: 20px;
+   
+//  }
 
+i{
+  position: relative;
+  font-family: "BlenderProBold";
+  font-style: normal;
+  color: $cyber-blue;
+}
 
-
-
-
-
-
+i::after{
+  content: attr(data-text);
+  font-size: 15px;
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  background-color: #0a5dff;
+  padding: 5px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-family: "BlenderProBold";
+  display: none;
+}
+i:hover::after{
+  display: block;
+}
 
 
 

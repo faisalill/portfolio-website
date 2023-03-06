@@ -188,7 +188,6 @@ body {
   color: transparent;
   -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: #ff399e;
-  text-shadow: #ff399e 0px 0px 10px;
 }
 
 .hello-text:nth-child(even) {
@@ -292,7 +291,7 @@ img {
 }
 
 .nav-buttons a::before {
-  color: #ff399e;
+  color: #fd1630;
 }
 
 .nav-buttons a::after {
@@ -312,19 +311,86 @@ img {
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ff399e;
+  color: #000;
 }
 
 .about p {
   font-size: 30px;
   padding: 10px;
   font-weight: 500;
+  margin-left: 10px;
+  color: #00fed2;
 }
 
 .body {
   padding: 20px;
-  background-color: #fff901;
-  color: #000;
+  background-color: #000;
   font-family: "BlenderProBook";
+}
+
+.skills h1 {
+  font-size: 40px;
+  font-family: "BlenderProBold";
+  text-transform: uppercase;
+  padding: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ff399e;
+  color: #000;
+}
+
+.fa-brands {
+  color: #00fed2;
+  font-size: 50px;
+}
+
+.fa-solid {
+  color: #00fed2;
+  font-size: 50px;
+}
+
+.next {
+  background-color: #00fed2;
+  border-radius: 50% 50% 50% 50%;
+  height: 55px;
+  position: relative;
+  top: 5px;
+  width: 55px;
+}
+
+.skills-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
+
+i {
+  position: relative;
+  font-family: "BlenderProBold";
+  font-style: normal;
+  color: #00fed2;
+}
+
+i::after {
+  content: attr(data-text);
+  font-size: 15px;
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  background-color: #0a5dff;
+  padding: 5px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-family: "BlenderProBold";
+  display: none;
+}
+
+i:hover::after {
+  display: block;
 }
 
 body::-webkit-scrollbar {
