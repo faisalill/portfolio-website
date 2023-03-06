@@ -377,41 +377,32 @@ img {
   padding: 20px;
 }
 
-i {
-  position: relative;
-  font-family: "BlenderProBold";
-  font-style: normal;
-  color: #00fed2;
-}
-
-i::after {
-  content: attr(data-text);
-  font-size: 15px;
-  position: absolute;
-  top: -35%;
-  left: 50%;
-  background-color: #0a5dff;
-  padding: 5px;
-  border-radius: 5px;
-  letter-spacing: 2px;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  font-family: "BlenderProBold";
-  display: none;
-}
-
-i:hover::after {
-  display: block;
-}
-
 .cursor {
   display: none;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   position: absolute;
-  z-index: 100;
   background-color: #00fed2;
+  text-align: center;
+}
+
+.cursor-text {
+  font-size: 10px;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  color: #ff399e;
+  font-family: "BlenderProBold";
+  position: absolute;
+  z-index: 102;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .dot {
