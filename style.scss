@@ -485,9 +485,10 @@ cursor: none;
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: $cyber-purple;
-  color: $cyber-black;
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: $cyber-yellow;
+  color: $cyber-yellow;
+  // color: $cyber-black;
 }
 @mixin infop{
   font-size: 30px;
@@ -595,6 +596,19 @@ cursor: none;
   z-index: 102;
   white-space: nowrap;
 }
+.cursor-projectName{
+  font-size: 25px;
+  width: 550px;
+  height: 330px;
+  padding: 18px;
+  border-radius: 15px;
+  color: $cyber-blue;
+  background-color: $cyber-black;
+  font-family: "BlenderProBold";
+  position: absolute;
+  z-index: 102;
+  white-space: nowrap;
+}
 .cursor-video{
   height: 200px;
   width: 330px;
@@ -637,12 +651,17 @@ html{
 .projectName{
   font-size: 30px;
   font-weight: 700;
-  color: $cyber-black;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: $cyber-black;
+  -webkit-text-fill-color: $cyber-blue;
   text-transform: uppercase;
   font-family: "BlenderProBold";
   padding: 10px;
   background-color: $cyber-blue;
 }
+
+
+
 .videoElement{
   background-color: $vidElement-bg;
   font-size: 20px;
@@ -707,7 +726,9 @@ html{
   transform: translate(-50%, -50%) scale(0.3);
 }
 
-
+.div-end-svg{
+  width: 100%;
+}
 
 
 

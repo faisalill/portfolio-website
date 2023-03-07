@@ -147,31 +147,7 @@ icons.forEach(icon =>{
      })
 })
 
-// const projectTitle = document.querySelector(".projectName");
-// projectTitle.addEventListener("mouseenter", () => {
 
-//     cursor.classList.add("cursor-video");
-//     gsap.to(cursor, {
-//         ease: "power2.out",
-//         scale: 2,
-//         duration: 0.7,
-//         })
-//     text.innerHTML = `<video width="320" height="240" muted auto autoplay>
-//     <source src="./videos/pokemon-game.mp4" type="video/mp4">
-//     Your browser does not support the video tag.
-//   </video>`;
-// }
-// )
-// projectTitle.addEventListener("mouseleave", () => {
-//     cursor.classList.remove("cursor-video");
-//     gsap.to(cursor, {
-//         ease: "power2.out",
-//         scale: 1,
-//         duration: 0.5,
-//         })  
-//     text.innerHTML = "";
-// }
-// )
 const videoElements = document.querySelectorAll(".videoElement");
 videoElements.forEach(videoElement => {
     videoElement.addEventListener("mouseenter", () => {
@@ -179,7 +155,7 @@ videoElements.forEach(videoElement => {
         gsap.to(cursor, {
             ease: "power2.out",
             scale: 2,
-            duration: 7,
+            duration: 1,
             })
         text.innerHTML = `<video width="620" height="440" muted auto autoplay>
         <source src="${videoElement.getAttribute("data-video-path")}" type="video/mp4">
@@ -265,5 +241,34 @@ techStacks.forEach(techStack => {
             })
         text.innerHTML = "";
      })
+}
+)
+
+const projectNames = document.querySelectorAll(".projectName");
+projectNames.forEach(projectName => {
+        projectName.addEventListener("mouseenter", () => {
+            if (cursor.classList.contains("cursor-video")) {
+                cursor.classList.remove("cursor-video");
+              }
+            cursor.classList.remove("cursor")
+            cursor.classList.add("cursor-projectName");
+            gsap.to(cursor, {
+                ease: "linear",
+                scale: 1,
+                duration: 0.2,
+                })
+            text.innerHTML = projectName.getAttribute("data-display-text");
+        })
+        projectName.addEventListener("mouseleave", () => {
+            cursor.classList.add("cursor")
+            cursor.classList.remove("cursor-projectName");
+            gsap.to(cursor, {
+                ease: "power2.out",
+                scale: 1,
+                duration: 0.5,
+                })
+            text.innerHTML = "";
+         })
+
 }
 )

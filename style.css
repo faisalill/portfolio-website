@@ -312,9 +312,7 @@ img {
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ff399e;
-  color: #000;
+  color: #fff901;
 }
 
 .about p {
@@ -336,9 +334,7 @@ img {
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ff399e;
-  color: #000;
+  color: #fff901;
 }
 
 .projects h1 {
@@ -346,9 +342,7 @@ img {
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ff399e;
-  color: #000;
+  color: #fff901;
 }
 
 .icon {
@@ -412,6 +406,20 @@ img {
   white-space: nowrap;
 }
 
+.cursor-projectName {
+  font-size: 25px;
+  width: 550px;
+  height: 330px;
+  padding: 18px;
+  border-radius: 15px;
+  color: #00fed2;
+  background-color: #000;
+  font-family: "BlenderProBold";
+  position: absolute;
+  z-index: 102;
+  white-space: nowrap;
+}
+
 .cursor-video {
   height: 200px;
   width: 330px;
@@ -458,7 +466,9 @@ html {
 .projectName {
   font-size: 30px;
   font-weight: 700;
-  color: #000;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-fill-color: #00fed2;
   text-transform: uppercase;
   font-family: "BlenderProBold";
   padding: 10px;
@@ -529,6 +539,10 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.3);
+}
+
+.div-end-svg {
+  width: 100%;
 }
 
 body::-webkit-scrollbar {
