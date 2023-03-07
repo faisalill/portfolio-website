@@ -1,3 +1,6 @@
+window.onload = function() {
+    console.log("All Content Loaded");
+}
 gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
     scrollTrigger:{
