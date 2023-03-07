@@ -1,3 +1,15 @@
+const pokemonVideo = document.createElement("video")
+pokemonVideo.src = "./public/videos/pokemon-game.mp4"
+pokemonVideo.preload = "auto";
+
+const eventsVideo = document.createElement("video")
+eventsVideo.src = "./public/videos/iic-portfolio.mp4"
+eventsVideo.preload = "auto";
+
+const onlineIdeVideo = document.createElement("video")
+onlineIdeVideo.src = "./public/videos/onlineide.mp4"
+onlineIdeVideo.preload = "auto";
+
 window.onload = function() {
     console.log("All Content Loaded");
 }
