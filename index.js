@@ -1,14 +1,28 @@
 const pokemonVideo = document.createElement("video")
-pokemonVideo.src = "./public/videos/pokemon-game.mp4"
+pokemonVideo.src = "/videos/pokemon-game.mp4"
 pokemonVideo.preload = "auto";
 
 const eventsVideo = document.createElement("video")
-eventsVideo.src = "./public/videos/iic-portfolio.mp4"
+eventsVideo.src = "/videos/iic-portfolio.mp4"
 eventsVideo.preload = "auto";
 
 const onlineIdeVideo = document.createElement("video")
-onlineIdeVideo.src = "./public/videos/onlineide.mp4"
+onlineIdeVideo.src = "/videos/onlineide.mp4"
 onlineIdeVideo.preload = "auto";
+
+pokemonVideo.addEventListener("canplay", ()=>{
+    console.log("Pokemon Video Loaded");
+})
+
+eventsVideo.addEventListener("canplay", ()=>{
+    console.log("Events Video Loaded");
+}
+)
+
+onlineIdeVideo.addEventListener("canplay", ()=>{
+    console.log("Online Ide Video Loaded");
+}
+)
 
 window.onload = function() {
     console.log("All Content Loaded");
