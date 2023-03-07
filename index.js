@@ -150,7 +150,7 @@ videoElements.forEach(videoElement => {
         gsap.to(cursor, {
             ease: "power2.out",
             scale: 2,
-            duration: 0.7,
+            duration: 7,
             })
         text.innerHTML = `<video width="620" height="440" muted auto autoplay>
         <source src="${videoElement.getAttribute("data-video-path")}" type="video/mp4">
@@ -173,9 +173,8 @@ liveDemos.forEach(liveDemo => {
     liveDemo.addEventListener("mouseenter", () => {
         dot.classList.add("dot-liveDemo");
         gsap.to(dot, {
-            fontSize: "0.1rem",
             ease: "power2.out",
-            scale: 10,
+            scale: 5,
             duration: 0.7,
             })
         dot.innerHTML = `<i class="fa-solid fa-up-right-from-square"></i>`;
@@ -189,5 +188,53 @@ liveDemos.forEach(liveDemo => {
             })  
         dot.innerHTML = "";
     })
+}
+)
+
+const Codes = document.querySelectorAll(".Code");
+Codes.forEach(Code => {
+    Code.addEventListener("mouseenter", () => {
+        dot.classList.add("dot-liveDemo");
+        gsap.to(dot, {
+            ease: "power2.out",
+            scale: 5,
+            duration: 0.7,
+            })
+        dot.innerHTML = `<i class="fa-solid fa-up-right-from-square"></i>`;
+    })
+    Code.addEventListener("mouseleave", () => {
+        dot.classList.remove("dot-liveDemo");
+        gsap.to(dot, {
+            ease: "power2.out",
+            scale: 1,
+            duration: 1,
+            })  
+        dot.innerHTML = "";
+    })
+}
+)
+
+const techStacks = document.querySelectorAll(".TechStack");
+techStacks.forEach(techStack => {
+    techStack.addEventListener("mouseenter", () => {
+        cursor.classList.remove("cursor")
+        cursor.classList.add("cursor-techStack");
+        gsap.to(cursor, {
+            ease: "power2.out",
+            scale: 2,
+            duration: 0.7,
+            })
+        text.innerHTML = techStack.getAttribute("data-tech-stack");
+    })
+    techStack.addEventListener("mouseleave", () => {
+        cursor.classList.add("cursor")
+        cursor.classList.remove("cursor-techStack");
+        gsap.to(cursor, {
+            ease: "power2.out",
+            scale: 1,
+            duration: 0.5,
+            })
+        text.innerHTML = "";
+     })
 }
 )
