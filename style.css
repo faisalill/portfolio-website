@@ -351,12 +351,12 @@ img {
   color: #000;
 }
 
-.fa-brands {
+.icon {
   color: #00fed2;
   font-size: 50px;
 }
 
-.fa-solid {
+.icon {
   color: #00fed2;
   font-size: 50px;
 }
@@ -392,8 +392,17 @@ img {
   width: 35px;
   height: 35px;
   padding: 5px;
-  color: #ff399e;
+  color: #fd1630;
   font-family: "BlenderProBold";
+  position: absolute;
+  z-index: 102;
+}
+
+.cursor-video {
+  height: 200px;
+  width: 330px;
+  border-radius: 8px;
+  background-color: #00fed2;
   position: absolute;
   z-index: 102;
 }
@@ -417,6 +426,62 @@ img {
 
 html {
   cursor: none;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projectTile {
+  display: flex;
+  gap: 20px;
+}
+
+.videoElement {
+  background-color: #FE2867;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 20px;
+  text-align: center;
+}
+
+.LiveDemo {
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #FE2867;
+  padding: 10px;
+  cursor: none;
+}
+
+.LiveDemo a {
+  color: white;
+  text-decoration: none;
+  cursor: none;
+}
+
+.projectNumber {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #00fed2;
+}
+
+.dot-liveDemo {
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  z-index: 101;
+  background-color: white;
+}
+
+.dot-liveDemo i {
+  font-size: 10px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
 }
 
 body::-webkit-scrollbar {

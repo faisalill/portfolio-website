@@ -15,7 +15,7 @@ $cyber-red: #fd1630;
 $cyber-white: #cdcdcd;
 $cyber-yellow: #fff901;
 $cyber-purple: #ff399e;
-
+$vidElement-bg: #FE2867;
 
 :root {
   --text-left: #ff399e;
@@ -527,13 +527,16 @@ cursor: none;
 
 
 .fa-brands{
- @include skillsColor;
 }
-
-.fa-solid{
-@include skillsColor;
+.icon{
+  @include skillsColor;
 }
-
+// .fa-solid{
+// @include skillsColor;
+// }
+.icon{
+  @include skillsColor;
+}
 .next{
   background-color: $cyber-blue;
   border-radius: 50% 50% 50% 50%;
@@ -575,8 +578,16 @@ cursor: none;
   width: 35px;
   height: 35px;
   padding: 5px;
-  color: $cyber-purple;
+  color: $cyber-red;
   font-family: "BlenderProBold";
+  position: absolute;
+  z-index: 102;
+}
+.cursor-video{
+  height: 200px;
+  width: 330px;
+  border-radius: 8px;
+  background-color: $cyber-blue;
   position: absolute;
   z-index: 102;
 }
@@ -595,15 +606,65 @@ cursor: none;
   z-index: 101;
   background-color: $cyber-red;
 }
-
 html{
   cursor: none;
 }
+.projectList{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.projectTile{
+  display: flex;
+  gap: 20px;
+
+}
+.videoElement{
+  background-color: $vidElement-bg;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 20px;
+  // width: 100px;
+  text-align: center;
+}
+.LiveDemo{
+  font-size: 18px;
+  font-weight: 700;
+ background-color: $vidElement-bg;
+ padding: 10px;
+ cursor: none;
+}
+.LiveDemo a{
+  color: white;
+  text-decoration: none;
+  cursor: none;
+}
+
+.Code{
+
+}
+.projectNumber{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $cyber-blue;
+}
 
 
-
-
-
+.dot-liveDemo{
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  z-index: 101;
+  background-color: white;
+}
+.dot-liveDemo i{
+  font-size: 10px;
+  color: $cyber-black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+}
 
 
 

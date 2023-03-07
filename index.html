@@ -3,11 +3,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./node_modules/augmented-ui/augmented-ui.min.css" />
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
-  <div class="dot"></div>
+  <div class="dot "></div>
   <div class="cursor">
     <span class="text"></span>
   </div>
@@ -108,11 +109,25 @@
 </div>
 <div class="projects">
   <h1>Projects</h1>
-  <div class="project-box">
-    <h2 class="project-title">Pokemon Game</h2>
-     <div class="vid">
-
-     </div>
+  <div class="projectList">
+    <div class="projectTile" >
+      <h2 class="projectName">Pokemon Game</h2>
+      <span class="videoElement" data-video-path="./videos/pokemon-game.mp4" data-augmented-ui="tl-clip br-clip">Video</span>
+      <span class="LiveDemo"  data-augmented-ui="tl-clip br-clip" ><a href="https://pokemon-boss-fight.netlify.app" target="_blank">Live Demo</a></span>
+      <span class="Code">Code</span>
+    </div>
+    <div class="projectTile" >
+      <h2 class="projectName">College Events</h2>
+      <span class="videoElement" data-video-path="./videos/iic-portfolio.mp4" data-augmented-ui="tl-clip br-clip">Video</span>
+      <span class="LiveDemo" data-augmented-ui="tl-clip br-clip"><a href="https://iic-events-demo.vercel.app/" target="_blank">Live Demo</a></span>
+      <span class="Code">Code</span>
+    </div>
+    <div class="projectTile" >
+      <h2 class="projectName">Online IDE and Compiler</h2>
+      <span class="videoElement" data-video-path="./videos/onlineide.mp4" data-augmented-ui="tl-clip br-clip">Video</span>
+      <span class="LiveDemo" data-augmented-ui="tl-clip br-clip" ><a  href="http://onlineide.xyz" target="_blank">Live Demo</a></span>
+      <span class="Code">Code</span>
+    </div>
   </div>
 </div>
 </div> 

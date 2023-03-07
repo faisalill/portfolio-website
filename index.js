@@ -69,6 +69,8 @@ tl.to(".container-2", {
 const cursor = document.querySelector(".cursor");
 const dot = document.querySelector(".dot");
 const text = document.querySelector(".text");
+cursor.style.pointerEvents = "none";
+dot.style.pointerEvents = "none";
 window.addEventListener("mousemove", (e) => {
     cursor.style.display = "block";
     dot.style.display = "block";
@@ -81,6 +83,7 @@ window.addEventListener("mousemove", (e) => {
 
 function moveCursor (){
     gsap.to(cursor, {
+        ease: "power2.out",
         x: dot.getBoundingClientRect().left + (dot.offsetWidth / 2) - (cursor.offsetWidth / 2) ,
         y: dot.getBoundingClientRect().top + (dot.offsetHeight / 2) - (cursor.offsetHeight / 2) ,
            duration: 1,
@@ -92,23 +95,99 @@ setInterval(moveCursor, 10);
 const icons = document.querySelectorAll(".icon");
 icons.forEach(icon =>{
     icon.addEventListener("mouseenter", () => {
-        cursor.style.pointerEvents = "none";
-        dot.style.pointerEvents = "none";
+        // cursor.style.pointerEvents = "none";
+        // dot.style.pointerEvents = "none";
         cursor.classList.add("cursor-text");
         gsap.to(cursor, {
+            ease: "power2.out",
             scale: 2,
-            duration: 0.5,
+            duration: 0.7,
             })
         text.innerHTML = icon.getAttribute("data-text");
     })
     icon.addEventListener("mouseleave", () => {
-        cursor.style.pointerEvents = "auto";
-        dot.style.pointerEvents = "auto";
+        // cursor.style.pointerEvents = "auto";
+        // dot.style.pointerEvents = "auto";
         cursor.classList.remove("cursor-text");
         gsap.to(cursor, {
+            ease: "power2.out",
             scale: 1,
             duration: 0.5,
             })
         text.innerHTML = "";
      })
 })
+
+// const projectTitle = document.querySelector(".projectName");
+// projectTitle.addEventListener("mouseenter", () => {
+
+//     cursor.classList.add("cursor-video");
+//     gsap.to(cursor, {
+//         ease: "power2.out",
+//         scale: 2,
+//         duration: 0.7,
+//         })
+//     text.innerHTML = `<video width="320" height="240" muted auto autoplay>
+//     <source src="./videos/pokemon-game.mp4" type="video/mp4">
+//     Your browser does not support the video tag.
+//   </video>`;
+// }
+// )
+// projectTitle.addEventListener("mouseleave", () => {
+//     cursor.classList.remove("cursor-video");
+//     gsap.to(cursor, {
+//         ease: "power2.out",
+//         scale: 1,
+//         duration: 0.5,
+//         })  
+//     text.innerHTML = "";
+// }
+// )
+const videoElements = document.querySelectorAll(".videoElement");
+videoElements.forEach(videoElement => {
+    videoElement.addEventListener("mouseenter", () => {
+        cursor.classList.add("cursor-video");
+        gsap.to(cursor, {
+            ease: "power2.out",
+            scale: 2,
+            duration: 0.7,
+            })
+        text.innerHTML = `<video width="620" height="440" muted auto autoplay>
+        <source src="${videoElement.getAttribute("data-video-path")}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>`;
+    })
+    videoElement.addEventListener("mouseleave", () => {
+        cursor.classList.remove("cursor-video");
+        gsap.to(cursor, {
+            ease: "power2.out",
+            scale: 1,
+            duration: 0.5,
+            })  
+        text.innerHTML = "";
+    })
+}
+)
+const liveDemos = document.querySelectorAll(".liveDemo");
+liveDemos.forEach(liveDemo => {
+    liveDemo.addEventListener("mouseenter", () => {
+        dot.classList.add("dot-liveDemo");
+        gsap.to(dot, {
+            fontSize: "0.1rem",
+            ease: "power2.out",
+            scale: 10,
+            duration: 0.7,
+            })
+        dot.innerHTML = `<i class="fa-solid fa-up-right-from-square"></i>`;
+    })
+    liveDemo.addEventListener("mouseleave", () => {
+        dot.classList.remove("dot-liveDemo");
+        gsap.to(dot, {
+            ease: "power2.out",
+            scale: 1,
+            duration: 1,
+            })  
+        dot.innerHTML = "";
+    })
+}
+)
