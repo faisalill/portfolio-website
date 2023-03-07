@@ -652,12 +652,12 @@ html{
   font-size: 30px;
   font-weight: 700;
   -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: $cyber-black;
-  -webkit-text-fill-color: $cyber-blue;
+  -webkit-text-stroke-color: $cyber-blue;
+  -webkit-text-fill-color: $cyber-black;
   text-transform: uppercase;
   font-family: "BlenderProBold";
   padding: 10px;
-  background-color: $cyber-blue;
+  background: $cyber-black;
 }
 
 

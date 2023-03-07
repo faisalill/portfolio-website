@@ -467,12 +467,12 @@ html {
   font-size: 30px;
   font-weight: 700;
   -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #000;
-  -webkit-text-fill-color: #00fed2;
+  -webkit-text-stroke-color: #00fed2;
+  -webkit-text-fill-color: #000;
   text-transform: uppercase;
   font-family: "BlenderProBold";
   padding: 10px;
-  background-color: #00fed2;
+  background: #000;
 }
 
 .videoElement {
