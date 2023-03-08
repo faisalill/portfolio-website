@@ -415,6 +415,7 @@ img{
 width: 100vw;
 height: 100vh;
 // overflow: scroll;
+overflow-x: hidden;
 background-color: $cyber-black;
 color: white;
 cursor: none;
@@ -477,9 +478,7 @@ cursor: none;
 .nav-buttons a:hover::before{
   transform: translate(-52%, -50%);
 }
-.about{
- 
-}
+
 @mixin infoh1{
   font-size: 40px;
   font-family: "BlenderProBold";
@@ -549,8 +548,11 @@ cursor: none;
 .skills-icons{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 20px;
-  padding: 20px;
+  padding: 30px 10px;
+  // color: #00fed2;
+  --aug-border-bg: #00fed2;
 }
 
 // .skill-1{
@@ -603,6 +605,7 @@ cursor: none;
   padding: 18px;
   border-radius: 15px;
   color: $cyber-blue;
+  border: 2px solid $cyber-blue;
   background-color: $cyber-black;
   font-family: "BlenderProBold";
   position: absolute;
@@ -631,7 +634,7 @@ cursor: none;
   position: absolute;
   display: none;
   z-index: 101;
-  background-color: $cyber-red;
+  background-color: $vidElement-bg;
 }
 html{
   cursor: none;
@@ -641,6 +644,11 @@ html{
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+  // border: 10px solid $cyber-blue;
+  // --aug-border: initial;
+  // --aug-border-bg: #00fed2;
+  --aug-border-bg: #00fed2;
+  padding: 40px 10px;
 }
 .projectTile{
   display: flex;
@@ -656,8 +664,25 @@ html{
   -webkit-text-fill-color: $cyber-black;
   text-transform: uppercase;
   font-family: "BlenderProBold";
-  padding: 10px;
+  padding: 10px 36px;
   background: $cyber-black;
+  --aug-border: initial;
+  --aug-border-bg: #00fed2;
+  // --aug-clip-tl1: initial;
+  //   --aug-round-tr1: initial;
+  //   --aug-clip-br1: initial;
+  //   --aug-round-bl1: initial;
+  //   --aug-border: initial;
+  //   --aug-inlay: initial;
+  //   --aug-border-all: 4px;
+  //   --aug-inlay-all: 2px;
+  //   --aug-border-bg: gold;
+  //   --aug-inlay-bg: purple;
+  //   --aug-inlay-opacity: 0.95;
+  //   --aug-tl1: 40px;
+  //   --aug-br1: 40px;
+  //   --aug-tr1: 10px;
+  //   --aug-bl1: 10px;
 }
 
 
@@ -705,8 +730,7 @@ html{
 }
 
 .projectNumber{
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: $cyber-blue;
+ text-shadow: 0px 0px 100px $cyber-blue;
 }
 
 
