@@ -416,6 +416,7 @@ width: 100vw;
 height: 100vh;
 // overflow: scroll;
 overflow-x: hidden;
+// overflow-y: hidden;
 background-color: $cyber-black;
 color: white;
 cursor: none;
@@ -586,6 +587,19 @@ cursor: none;
   position: absolute;
   z-index: 102;
 }
+.cursor-email{
+  font-size: 10px;
+  width: 105px;
+  height: 20px;
+  padding: 5px;
+  color: $cyber-blue;
+  background-color: $cyber-black;
+  font-family: "BlenderProBold";
+  position: absolute;
+  z-index: 102;
+  text-align: center;
+  border-radius: 3px;
+}
 .cursor-techStack{
   font-size: 10px;
   width: 150px;
@@ -695,6 +709,16 @@ html{
   // width: 100px;
   text-align: center;
 }
+.disabledVideoElement{
+  background-color: $vidElement-bg;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 20px;
+  // width: 100px;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-align: center;
+}
 .LiveDemo{
   font-size: 18px;
   font-weight: 700;
@@ -702,10 +726,23 @@ html{
  padding: 10px;
  cursor: none;
 }
+.disabledLiveDemo{
+  font-size: 18px;
+  font-weight: 700;
+ background-color: $vidElement-bg;
+ padding: 10px;
+ cursor: not-allowed;
+ opacity: 0.5;
+}
 .LiveDemo a{
   color: white;
   text-decoration: none;
   cursor: none;
+}
+.disabledLiveDemo a{
+  color: white;
+  text-decoration: none;
+  cursor: not-allowed;
 }
 .TechStack{
   font-size: 18px;
@@ -754,11 +791,18 @@ html{
   width: 100%;
 }
 
+.about-div{
+  --aug-border-bg: #00fed2;
+  padding: 10px 4px;
+}
 
+.contact-icon{
+  @include skillsColor;
+}
 
-
-
-
+.email-icon{
+  @include skillsColor;
+}
 
 
 

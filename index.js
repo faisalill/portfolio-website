@@ -10,6 +10,11 @@ const onlineIdeVideo = document.createElement("video")
 onlineIdeVideo.src = "/videos/onlineide.mp4"
 onlineIdeVideo.preload = "auto";
 
+const reactThreeFiberVideo = document.createElement("video")
+reactThreeFiberVideo.src = "/videos/3dWorld.mp4"
+reactThreeFiberVideo.preload = "auto";
+
+
 pokemonVideo.addEventListener("canplay", ()=>{
     console.log("Pokemon Video Loaded");
 })
@@ -21,6 +26,11 @@ eventsVideo.addEventListener("canplay", ()=>{
 
 onlineIdeVideo.addEventListener("canplay", ()=>{
     console.log("Online Ide Video Loaded");
+}
+)
+
+reactThreeFiberVideo.addEventListener("canplay", ()=>{
+    console.log("React Three Fiber Video Loaded");
 }
 )
 
@@ -272,3 +282,63 @@ projectNames.forEach(projectName => {
 
 }
 )
+
+const contactIcons = document.querySelectorAll(".contact-icon");
+contactIcons.forEach(contactIcon => {
+    contactIcon.addEventListener("mouseenter", () => {
+        dot.classList.add("dot-liveDemo");
+        gsap.to(dot, {
+            ease: "power2.out",
+            scale: 5,
+            duration: 0.7,
+            })
+        dot.innerHTML = `<i class="fa-solid fa-up-right-from-square"></i>`;
+    })
+    contactIcon.addEventListener("mouseleave", () => {
+        dot.classList.remove("dot-liveDemo");
+        gsap.to(dot, {
+            ease: "power2.out",
+            scale: 1,
+            duration: 1,
+            })  
+        dot.innerHTML = "";
+    })
+}
+)
+
+const emailIcon = document.querySelectorAll(".email-icon");
+
+document.querySelector(".email-icon").addEventListener("click", ()=>{
+    const copyInput = document.createElement("input");
+    copyInput.value = "mfaisal.ilyas.d@gmail.com";
+    copyInput.select();
+    document.execCommand("copy");
+    text.innerHTML = "Copied!!<br>mfaisal.ilyas.d@gmail.com";
+})
+
+emailIcon.forEach(icon =>{
+    icon.addEventListener("mouseenter", () => {
+        // cursor.style.pointerEvents = "none";
+        // dot.style.pointerEvents = "none";
+        cursor.classList.remove("cursor")
+        cursor.classList.add("cursor-email");
+        gsap.to(cursor, {
+            ease: "power2.out",
+            scale: 2,
+            duration: 0.7,
+            })
+        text.innerHTML = icon.getAttribute("data-text");
+    })
+    icon.addEventListener("mouseleave", () => {
+        // cursor.style.pointerEvents = "auto";
+        // dot.style.pointerEvents = "auto";
+        cursor.classList.add("cursor")
+        cursor.classList.remove("cursor-email");
+        gsap.to(cursor, {
+            ease: "power2.out",
+            scale: 1,
+            duration: 0.5,
+            })
+        text.innerHTML = "";
+     })
+})
