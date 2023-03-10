@@ -1,3 +1,8 @@
+/**
+*
+* Testing
+*
+**/
 @font-face {
   font-family: "BlenderProBold";
   src: url("./fonts/Blender-Pro-Bold.otf");
@@ -255,6 +260,7 @@ img {
 
 .navbar {
   display: flex;
+  width: 50%;
 }
 
 .nav-slider {
@@ -263,13 +269,20 @@ img {
   background-position: 0;
   background-repeat: no-repeat;
   height: 40px;
-  width: 50%;
+  width: 60%;
   background-color: #00fed2;
+  position: absolute;
+  top: 0;
+  right: 15;
 }
 
 .nav-buttons {
   background-color: #00fed2;
-  padding: 8px;
+  padding: 8px 40px;
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 0;
 }
 
 .nav-buttons a {
@@ -313,6 +326,7 @@ img {
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
+  margin: 10px 10px 10px 0px;
   color: #fff901;
 }
 
@@ -325,7 +339,8 @@ img {
 }
 
 .body {
-  padding: 20px;
+  margin-top: 40px;
+  padding: 20px 100px;
   background-color: #000;
   font-family: "BlenderProBook";
 }
@@ -335,6 +350,7 @@ img {
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
+  margin: 10px 10px 10px 0px;
   color: #fff901;
 }
 
@@ -343,6 +359,7 @@ img {
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
+  margin: 10px 10px 10px 0px;
   color: #fff901;
 }
 
@@ -608,4 +625,30 @@ html {
 
 body::-webkit-scrollbar {
   width: 0;
+}
+
+@media (min-width: 1921px) {
+  .body {
+    padding: 0 400px;
+  }
+}
+@media (max-width: 1920px) and (min-width: 1640px) {
+  .body {
+    padding: 0 350px;
+  }
+}
+@media (max-width: 1640px) and (min-width: 1300px) {
+  .body {
+    padding: 0 200px;
+  }
+}
+@media (max-width: 1300px) and (min-width: 1090px) {
+  .body {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1090px) and (min-width: 768px) {
+  .body {
+    padding: 0 8px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,4 @@
+@import "./breakpoints.scss";
 @font-face {
   font-family: 'BlenderProBold';
   src: url('./fonts/Blender-Pro-Bold.otf') ;
@@ -427,7 +428,7 @@ cursor: none;
 .navbar{
   display: flex;
   // justify-content: ;
-  // width: 100%;
+  width: 50%;
   // justify-content: stretch;
 }
 .nav-slider{
@@ -436,12 +437,20 @@ cursor: none;
   background-position: 0;
   background-repeat: no-repeat;
   height: 40px;
-  width: 50%;
+  width: 60%;
   background-color: $cyber-blue;
+  
+  position: absolute;
+  top: 0;
+  right: 15 ;
 }
 .nav-buttons{
   background-color: $cyber-blue;
-  padding: 8px;
+  padding: 8px 40px;
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 0;
   // display: inline-block;
 }
 
@@ -485,6 +494,7 @@ cursor: none;
   font-family: "BlenderProBold";
   text-transform: uppercase;
   padding: 10px;
+  margin: 10px 10px 10px 0px;
   // -webkit-text-stroke-width: 1px;
   // -webkit-text-stroke-color: $cyber-yellow;
   color: $cyber-yellow;
@@ -504,10 +514,10 @@ cursor: none;
   @include infop;
 }
 .body{
-  padding: 20px;
+  margin-top: 40px;
+  padding: 20px 100px;
   background-color: $cyber-black;
   font-family: "BlenderProBook";
-  
 }
 
 .skills h1{
@@ -804,31 +814,37 @@ html{
   @include skillsColor;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body::-webkit-scrollbar{
   width: 0;
 }
 
+@include media(">LGdesktop"){
+  .body{
+    padding: 0 400px;
+  }
+  
+}
+
+@include media("<=LGdesktop", ">=desktop"){
+  .body{
+    padding: 0 350px;
+  }
+}
+
+@include media("<=desktop", ">=smallDesktop"){
+  .body{
+    padding: 0 200px;
+  }
+}
+
+  @include media("<=smallDesktop", ">=smallerDesktop"){
+    .body{
+      padding: 0 100px;
+    }
+  }
+
+  @include media("<=smallerDesktop", ">=tablet"){
+    .body{
+      padding:0 8px;
+    }
+  }
