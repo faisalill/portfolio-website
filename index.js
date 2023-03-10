@@ -311,8 +311,10 @@ const emailIcon = document.querySelectorAll(".email-icon");
 document.querySelector(".email-icon").addEventListener("click", ()=>{
     const copyInput = document.createElement("input");
     copyInput.value = "mfaisal.ilyas.d@gmail.com";
+    document.body.appendChild(copyInput); 
     copyInput.select();
     document.execCommand("copy");
+    document.body.removeChild(copyInput);
     text.innerHTML = "Copied!!<br>mfaisal.ilyas.d@gmail.com";
 })
 
