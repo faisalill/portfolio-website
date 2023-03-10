@@ -259,6 +259,7 @@ img {
   overflow-y: hidden;
   font-family: "BlenderProBold";
   position: relative;
+  cursor: none;
 }
 
 .navbar {

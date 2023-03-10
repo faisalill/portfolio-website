@@ -117,30 +117,34 @@ const dot = document.querySelector(".dot");
 const text = document.querySelector(".text");
 
 
-window.addEventListener("scroll", (e) => {
-    // cursor.style.top = window.scrollY + "px";
-    // dot.style.top = window.scrollY +  "px";
-});
+
 cursor.style.pointerEvents = "none";
 dot.style.pointerEvents = "none";
 window.addEventListener("mousemove", (e) => {
     cursor.style.display = "block";
     dot.style.display = "block";
     gsap.to(dot, {
-        left: e.clientX -5,
-        top: e.clientY -5,
-        duration: 0.5,
+        left: e.clientX -5 ,
+        top: e.clientY +1 + secondPage.scrollTop,
+        duration: 1,
     })
 })
 secondPage.addEventListener("scroll",(e)=>{
-    console.log("scrolled")
+    cursor.style.display = "block";
+    dot.style.display = "block";
+    console.log(secondPage.clientTop)
+    gsap.to(dot, {
+        left: e.clientX + 15 ,
+        top: e.clientY + 5 + secondPage.scrollTop,
+        duration: 0.5,
+    })
 })
 
 function moveCursor (){
     gsap.to(cursor, {
         ease: "power2.out",
         x: dot.getBoundingClientRect().left + (dot.offsetWidth / 2) - (cursor.offsetWidth / 2) ,
-        y: dot.getBoundingClientRect().top + (dot.offsetHeight / 2) - (cursor.offsetHeight / 2) ,
+        y: dot.getBoundingClientRect().top + (dot.offsetHeight / 2) - (cursor.offsetHeight / 2) + secondPage.scrollTop ,
            duration: 1,
            })
 }
