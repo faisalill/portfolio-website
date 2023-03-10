@@ -44,7 +44,7 @@ const tl = gsap.timeline({
         start: "top",
         end: "bottom",
         scrub: 0.2,
-        // markers: true,
+        markers: true,
     }
 })
 
@@ -101,23 +101,39 @@ tl.to(".container-2", {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    overflowY: "scroll",
+    // rotationY: "40deg",
+    // rotationX: "60deg",
+    // rotationZ: "10deg",
     duration: 1,
 })
+tl.to(".container-2", {
+    overflowY: "scroll",
+    duration: 0.1,
+})
 
+const secondPage = document.querySelector(".container-2");
 const cursor = document.querySelector(".cursor");
 const dot = document.querySelector(".dot");
 const text = document.querySelector(".text");
+
+
+window.addEventListener("scroll", (e) => {
+    // cursor.style.top = window.scrollY + "px";
+    // dot.style.top = window.scrollY +  "px";
+});
 cursor.style.pointerEvents = "none";
 dot.style.pointerEvents = "none";
 window.addEventListener("mousemove", (e) => {
     cursor.style.display = "block";
     dot.style.display = "block";
     gsap.to(dot, {
-        x: e.clientX -5,
-        y: e.clientY -5,
+        left: e.clientX -5,
+        top: e.clientY -5,
         duration: 0.5,
     })
+})
+secondPage.addEventListener("scroll",(e)=>{
+    console.log("scrolled")
 })
 
 function moveCursor (){
@@ -344,3 +360,16 @@ emailIcon.forEach(icon =>{
         text.innerHTML = "";
      })
 })
+
+
+
+
+// secondPage.addEventListener("mousemove", (e)=>{
+//     console.log(e.clientX, e.clientY)
+//     console.log(e.pageX, e.pageY)
+//     console.log(dot.getClientRects().item(0).x, dot.getClientRects().item(0).y, "dot")
+// })
+// secondPage.addEventListener("scroll", (e)=>{
+//     console.log(e.pageX, e.pageY)
+//     console.log(dot.getClientRects().item(0).x, dot.getClientRects().item(0).y, "dot")
+// })
