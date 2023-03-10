@@ -44,7 +44,7 @@ const tl = gsap.timeline({
         start: "top",
         end: "bottom",
         scrub: 0.2,
-        markers: true,
+        // markers: true,
     }
 })
 
@@ -109,6 +109,9 @@ tl.to(".container-2", {
 tl.to(".container-2", {
     overflowY: "scroll",
     duration: 0.1,
+    onComplete: ()=>{
+        tl.kill()
+    }
 })
 
 const secondPage = document.querySelector(".container-2");
