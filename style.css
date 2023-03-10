@@ -623,8 +623,8 @@ html {
   font-size: 50px;
 }
 
-body::-webkit-scrollbar {
-  width: 0;
+.contact {
+  margin-bottom: 100px;
 }
 
 @media (min-width: 1921px) {
@@ -651,4 +651,7 @@ body::-webkit-scrollbar {
   .body {
     padding: 0 8px;
   }
+}
+body::-webkit-scrollbar {
+  width: 0;
 }/*# sourceMappingURL=style.css.map */
