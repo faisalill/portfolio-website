@@ -652,6 +652,10 @@ img {
     padding: 0 8px;
   }
 }
+.container-2::-webkit-scrollbar {
+  width: 0;
+}
+
 body::-webkit-scrollbar {
   width: 0;
 }/*# sourceMappingURL=style.css.map */
