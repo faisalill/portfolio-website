@@ -1,3 +1,6 @@
+
+var loading = 0;
+
 const pokemonVideo = document.createElement("video")
 pokemonVideo.src = "/videos/pokemon-game.mp4"
 pokemonVideo.preload = "auto";
@@ -16,26 +19,31 @@ reactThreeFiberVideo.preload = "auto";
 
 
 pokemonVideo.addEventListener("canplay", ()=>{
-    console.log("Pokemon Video Loaded");
+    loading++;
+    changePages(loading);
 })
 
 eventsVideo.addEventListener("canplay", ()=>{
-    console.log("Events Video Loaded");
+    loading++;
+    changePages(loading);
 }
 )
 
 onlineIdeVideo.addEventListener("canplay", ()=>{
-    console.log("Online Ide Video Loaded");
+    loading++;
+    changePages(loading);
 }
 )
 
 reactThreeFiberVideo.addEventListener("canplay", ()=>{
-    console.log("React Three Fiber Video Loaded");
+    loading++;
+    changePages(loading);
 }
 )
 
 window.onload = function() {
-    console.log("All Content Loaded");
+    loading++;
+    changePages(loading);
 }
 gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
@@ -114,7 +122,32 @@ tl.to(".container-2", {
     }
 })
 
+const loadingPage = document.querySelector(".loading");
+const firstPage = document.querySelector(".container");
 const secondPage = document.querySelector(".container-2");
+
+// firstPage.style.opacity = "100%";
+// secondPage.style.display = "100%";
+// loadingPage.style.display = "none";
+
+function changePages (loading){
+    if(loading === 5){
+     gsap.to(loadingPage, {
+            display: "none",
+            opacity: 0,
+            duration: 1,
+     })
+     gsap.to(firstPage, {
+        opacity: 1,
+        duration: 1,
+        })
+     gsap.to(secondPage, {
+        opacity: 1,
+        duration: 1,
+     })
+    }
+}
+
 const cursor = document.querySelector(".cursor");
 const dot = document.querySelector(".dot");
 const text = document.querySelector(".text");
@@ -369,14 +402,3 @@ emailIcon.forEach(icon =>{
 })
 
 
-
-
-// secondPage.addEventListener("mousemove", (e)=>{
-//     console.log(e.clientX, e.clientY)
-//     console.log(e.pageX, e.pageY)
-//     console.log(dot.getClientRects().item(0).x, dot.getClientRects().item(0).y, "dot")
-// })
-// secondPage.addEventListener("scroll", (e)=>{
-//     console.log(e.pageX, e.pageY)
-//     console.log(dot.getClientRects().item(0).x, dot.getClientRects().item(0).y, "dot")
-// })
